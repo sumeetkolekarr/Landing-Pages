@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    .bordered-text {
+      position: relative;
+      padding: 10px;
+      /* width: 100VW; */
+      border: 2px solid #000;
+      display: inline-block;
+      border-radius: 50%; /* Set border-radius to 50% or any desired value to make it circular */
+    }
+
+    .bordered-text::before,
+    .bordered-text::after {
+      content: "*"; /* You can replace this with any character or content you want */
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      background-color: white; /* Optional: Set background color to match the element's background */
+      padding: 0 5px; /* Optional: Adjust padding to control spacing between characters and border */
+      border-radius: 50%; /* Set border-radius to 50% to make it circular */
+    }
+
+    .bordered-text::before {
+      left: -25px; /* Adjust the position to control the space between the character and the border */
+    }
+
+    .bordered-text::after {
+      right: -25px; /* Adjust the position to control the space between the character and the border */
+    }
+    .center{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+    }
+  </style>
+</head>
+<body>
+    <div class="center">
+        <div class="bordered-text"></div>
+    </div>
+</body>
+</html>
