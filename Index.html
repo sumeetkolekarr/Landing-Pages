@@ -82,7 +82,7 @@
         color: aliceblue;
         width: 100vw;
       }
-      .subheading h2{
+      .subheading h2 {
         display: none;
       }
       .subheading h3 {
@@ -260,16 +260,16 @@
         align-items: center;
         border: 3px solid aliceblue;
       }
-      .c11:hover{
+      .c11:hover {
         background-color: #6c20b9;
       }
-      .c31:hover{
+      .c31:hover {
         background-color: #6c20b9;
       }
-      .c12:hover{
+      .c12:hover {
         background-color: #6c20b9;
       }
-      .c22:hover{
+      .c22:hover {
         background-color: #6c20b9;
       }
       .c21 {
@@ -310,6 +310,24 @@
         display: flex;
         justify-content: center;
         align-items: center;
+      }
+      .mainimg img {
+        height: 175px;
+        position: absolute;
+        bottom: 36vh;
+        left: 43vw;
+        animation-name: example;
+        animation-duration: 7500s;
+        animation-iteration-count: infinite;
+        transition: linear;
+      }
+      @keyframes example {
+        from {
+          transform: rotate(0deg);
+        }
+        to {
+          transform: rotate(360000deg);
+        }
       }
     </style>
   </head>
@@ -384,6 +402,9 @@
         <div class="c3">
           <p class="c31">Software Development for Business</p>
         </div>
+      </div>
+      <div class="mainimg">
+        <img src="./1.png" alt="Logo" />
       </div>
     </div>
   </body>
