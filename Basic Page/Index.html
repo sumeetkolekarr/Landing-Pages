@@ -1,117 +1,390 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Landing Page</title>
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@300&display=swap');
-      </style>
-    <style>
-        *{
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: 'Raleway', sans-serif;
-            background-color: #A38DFC;
-        }
-        .navbar{
-            display: flex;
-            margin-top: 20px;
-            margin-left: 10px;
-            margin-right: 20px;
-        }
-        .image{
-            width: 6vw;
-        }
-        .logoImg{
-            height: 50px;
-            border-radius: 10px;
-        }
-        .navigator{
-            height: 50px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            width: 80vw;
-        }
-        .navigator a{
-            text-decoration: none;
-            color: black;
-            margin-left: 100px;
-            font-weight: 600;
-        }
-        .login{
-            width: 15vw;
-            height: 50px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-        .login a{
-            text-decoration: none;
-            color: #EAE6FE;
-            padding: 10px 15px 10px 15px;
-            background-color: rgb(41, 39, 39);
-            border-radius: 20px;
-            width: 120px;
-            font-weight: 600;
-        }
-        .main{
-            width: 100vw;
-            height: 25vh;
-        }
-        .heading{
-            margin-top: 5vh;
-        }
-        .heading h1{
-            text-align: center;
-        }
-        .subheading{
-            margin-top: 10vh;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 2.5vh;
-            width: 100vw;
-        }
-        .subheading h3{
-            text-align: center;
-            width: 250px;
-        }
-        .leftcard{
-            position: relative;
-            height: 40vh;
-            width: 20vw;
-            bottom: 250px;
-            background-color: rgb(41, 39, 39);
-        }
+      @import url("https://fonts.googleapis.com/css2?family=Raleway:wght@300&display=swap");
     </style>
-</head>
-<body>
-    <div class="navbar">
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap");
+    </style>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: "Raleway", sans-serif;
+        background-color: #a38dfc;
+        overflow: hidden;
+      }
+      .navbar {
+        display: flex;
+        margin-top: 20px;
+        margin-left: 10px;
+        margin-right: 20px;
+      }
+      .image {
+        width: 6vw;
+      }
+      .logoImg {
+        height: 50px;
+        border-radius: 10px;
+      }
+      .navigator {
+        height: 50px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 80vw;
+      }
+      .navigator a {
+        text-decoration: none;
+        color: aliceblue;
+        margin-left: 100px;
+        font-weight: 600;
+      }
+      .login {
+        width: 15vw;
+        height: 50px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .login a {
+        text-decoration: none;
+        color: #eae6fe;
+        padding: 10px 15px 10px 15px;
+        background-color: rgb(41, 39, 39);
+        border-radius: 20px;
+        width: 120px;
+        font-weight: 600;
+      }
+      .main {
+        width: 100vw;
+        height: 25vh;
+      }
+      .heading {
+        margin-top: 5vh;
+      }
+      .heading h1 {
+        text-align: center;
+        color: aliceblue;
+      }
+      .subheading {
+        margin-top: 2.5vh;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+        height: 10vh;
+        color: aliceblue;
+        width: 100vw;
+      }
+      .subheading h2{
+        display: none;
+      }
+      .subheading h3 {
+        text-align: center;
+        /* width: 250px; */
+      }
+      .leftcard {
+        position: absolute;
+        height: 335px;
+        width: 210px;
+        bottom: 50px;
+        left: 75px;
+        border-radius: 25px;
+        background-color: rgb(41, 39, 39);
+        z-index: 2;
+      }
+      .card {
+        background-color: rgb(41, 39, 39);
+        color: aliceblue;
+      }
+      .card h3 {
+        background-color: rgb(41, 39, 39);
+        margin-top: 25px;
+        width: 150px;
+        margin-left: 30px;
+        text-align: center;
+        font-family: "Poppins", sans-serif;
+      }
+      .card p {
+        height: 100px;
+        width: 100px;
+        font-family: "Poppins", sans-serif;
+        border: 5px solid #a38dfc;
+        background-color: rgb(41, 39, 39);
+        margin-left: 55px;
+        border-radius: 50px;
+        margin-top: 15px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 10px;
+      }
+      .card h1 {
+        background-color: rgb(41, 39, 39);
+        margin-left: 25px;
+        font-size: 40px;
+        font-family: "Poppins", sans-serif;
+      }
+      .card h5 {
+        background-color: rgb(41, 39, 39);
+        margin-left: 25px;
+        font-family: "Poppins", sans-serif;
+        margin-right: 5px;
+      }
+      .main-content {
+        height: 100vh;
+      }
+      .leftwhite {
+        height: 225px;
+        width: 550px;
+        background-color: aliceblue;
+        position: absolute;
+        bottom: -50px;
+        left: 25px;
+        z-index: 1;
+        border-top-right-radius: 25px;
+        border-top-left-radius: 25px;
+      }
+      .whcard {
+        background-color: aliceblue;
+      }
+      .whcard h1 {
+        background-color: aliceblue;
+        margin-top: 25px;
+        margin-left: 300px;
+        font-family: "Poppins", sans-serif;
+      }
+      .whcard h3 {
+        background-color: aliceblue;
+        /* margin-top: 5px; */
+        margin-left: 300px;
+      }
+      .tiltcard {
+        background-color: rgb(41, 39, 39);
+        height: 175px;
+        width: 200px;
+        position: absolute;
+        bottom: 250px;
+        right: 100px;
+        border-radius: 25px;
+        transform: rotate(-12.5deg);
+      }
+      .backcard {
+        background-color: #6c20b9;
+        height: 175px;
+        width: 225px;
+        position: absolute;
+        bottom: 290px;
+        right: 70px;
+        border-radius: 25px;
+      }
+      .rightcard {
+        background-color: rgb(41, 39, 39);
+        color: aliceblue;
+      }
+      .rightcard h1 {
+        margin-top: 30px;
+        text-align: center;
+        background-color: rgb(41, 39, 39);
+        font-family: "Poppins", sans-serif;
+      }
+      .rightcard p {
+        text-align: center;
+        background-color: rgb(41, 39, 39);
+      }
+      .rightcard img {
+        height: 50px;
+        background-color: transparent;
+      }
+      .img1 {
+        position: relative;
+        left: 27px;
+      }
+      .img2 {
+        z-index: 2;
+      }
+      .im {
+        background-color: rgb(41, 39, 39);
+        display: flex;
+        width: 200px;
+        height: 55px;
+        justify-content: center;
+        align-items: center;
+      }
+      .circle {
+        height: 32px;
+        display: flex;
+        font-family: "Poppins", sans-serif;
+        justify-content: center;
+        align-items: center;
+        width: 32px;
+        position: relative;
+        left: -15px;
+        z-index: 1;
+        border-radius: 50%;
+        background-color: #6c20b9;
+      }
+      .contentcard {
+        height: 120px;
+        position: absolute;
+        bottom: 10px;
+        right: 75px;
+        width: 300px;
+        background-color: #a38dfc;
+        color: aliceblue;
+      }
+      .c1 {
+        display: flex;
+      }
+      .c2 {
+        display: flex;
+        margin-top: 5px;
+      }
+      .c3 {
+        display: flex;
+        margin-top: 5px;
+      }
+      .c11 {
+        width: 180px;
+        height: 30px;
+        display: flex;
+        margin-right: 5px;
+        border-radius: 50px;
+        justify-content: center;
+        align-items: center;
+        border: 3px solid aliceblue;
+      }
+      .c11:hover{
+        background-color: #6c20b9;
+      }
+      .c31:hover{
+        background-color: #6c20b9;
+      }
+      .c12:hover{
+        background-color: #6c20b9;
+      }
+      .c22:hover{
+        background-color: #6c20b9;
+      }
+      .c21 {
+        width: 120px;
+        height: 30px;
+        display: flex;
+        margin-right: 5px;
+        border-radius: 50px;
+        justify-content: center;
+        align-items: center;
+        background-color: #6c20b9;
+        border: 3px solid aliceblue;
+      }
+      .c31 {
+        width: 285px;
+        height: 30px;
+        display: flex;
+        margin-right: 5px;
+        border-radius: 50px;
+        justify-content: center;
+        align-items: center;
+        border: 3px solid aliceblue;
+      }
+      .c12 {
+        border-radius: 50px;
+        border: 3px solid aliceblue;
+        height: 30px;
+        width: 99.5px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .c22 {
+        border-radius: 160px;
+        border: 3px solid aliceblue;
+        height: 30px;
+        width: 160.5px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="main-content">
+      <div class="navbar">
         <div class="image">
-            <img class="logoImg" src="./_616a3e1f-4bdc-4446-b875-7c22397eb7d1.jpeg" alt="Logo">
+          <img
+            class="logoImg"
+            src="./_616a3e1f-4bdc-4446-b875-7c22397eb7d1.jpeg"
+            alt="Logo"
+          />
         </div>
         <div class="navigator">
-            <a href="#">Home</a><a href="#">About</a><a href="#">Services</a>
+          <a href="#">Home</a><a href="#">About</a><a href="#">Services</a>
         </div>
         <div class="login">
-            <a class="sign" href="#">Sign In &nbsp; &nbsp; &rarr;</a>
+          <a class="sign" href="#">Sign In &nbsp; &nbsp; &rarr;</a>
         </div>
-    </div>
-    <div class="main">
+      </div>
+      <div class="main">
         <div class="heading">
-            <h1>Smart Digital Agency</h1>
+          <h1>Smart Digital Agency</h1>
         </div>
         <div class="subheading">
-            <h3>Agency that build many amazing products</h3>
+          <h3>Agency that build many amazing products</h3>
+          <h2>Hello</h2>
         </div>
-    </div>
-    <div class="leftcard">
+      </div>
+      <div class="leftcard">
         <div class="card">
-
+          <h3>First Round of Funding</h3>
+          <p>75%</p>
+          <h1>2.5K</h1>
+          <h5>263 Contributions in the last year</h5>
         </div>
+      </div>
+      <div class="leftwhite">
+        <div class="whcard">
+          <h1>4.875</h1>
+          <h3>Project Likes Last Year</h3>
+        </div>
+      </div>
+      <div class="backcard"></div>
+      <div class="tiltcard">
+        <div class="rightcard">
+          <h1>5000+</h1>
+          <p>Total Clients</p>
+          <div class="im">
+            <img
+              class="img1"
+              src="./Black and Gold Elegant Facebook Profile Picture (1).png"
+              alt="Img1"
+            /><img
+              class="img2"
+              src="./Green Gradient Minimalist Simple Instagram Profile Picture.png"
+              alt="Img2"
+            />
+            <div class="circle">+2</div>
+          </div>
+        </div>
+      </div>
+      <div class="contentcard">
+        <div class="c1">
+          <p class="c11">Mobile App Design</p>
+          <p class="c12">Games</p>
+        </div>
+        <div class="c2">
+          <p class="c21">Programming</p>
+          <p class="c22">Search Engine OPT</p>
+        </div>
+        <div class="c3">
+          <p class="c31">Software Development for Business</p>
+        </div>
+      </div>
     </div>
-</body>
+  </body>
 </html>
